@@ -26,7 +26,6 @@ public class MorseCode {
             "\"", "'", "/", "@", "&", "(", ")", "$",
 
             // extra
-            "�"
     };
 
     private static final String[] morse = {
@@ -44,7 +43,6 @@ public class MorseCode {
             "..--.-", ".-..-.", ".----.", "-..-.", ".--.-.", ".-...", "-.--.", "-.--.-", "...-..-",
 
             // extra
-            "�"
     };
 
     private static final Map<String, String> EN_TO_MORSE = new HashMap<>();
