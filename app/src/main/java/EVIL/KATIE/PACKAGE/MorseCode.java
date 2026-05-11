@@ -50,6 +50,17 @@ public class MorseCode {
 //        System.out.println(output); // hello, world!
 //    }
 
+    public static String[][] getLetterMorseTable() {
+        String[][] table = new String[english.length][2];
+
+        for (int i = 0; i < english.length; i++) {
+            table[i][0] = english[i];
+            table[i][1] = morse[i];
+        }
+
+        return table;
+    }
+
     public static String convertMorse(boolean codeToEnglish, String input) { // TRUE MEANS YOU TURN TGHE CODE TO ENGGLISH FALSE MEANS ENGLISH TO CODE
 
         if (input == null || input.isEmpty())
