@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".TTMActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_margin="30dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:text="Text\nTo\nMorse"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TTMInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/TTMInput"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@color/background_highlight"
+            android:ems="10"
+            android:hint="Text here"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/TTMSwapButton"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:backgroundTint="@color/accent"
+            android:text="Button"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="0dp" />
+
+        <TextView
+            android:id="@+id/TTMOutputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Morse"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/TTMOutput"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:background="@color/background_highlight"
+            android:enabled="true"
+            android:hint="Morse here"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

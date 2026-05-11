@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:layout_weight="1"
+        android:textSize="40sp"
+        android:layout_margin="30dp"
+        android:text="Morse\nCode\nTranslator" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:textSize="16sp"
+            android:textColor="@color/accent"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Made by: EVIL Katie" />
+
+        <Button
+            android:id="@+id/buttonGoTTM"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="0dp"
+            android:layout_margin="10dp"
+            android:text="Text To Morse" />
+
+        <Button
+            android:id="@+id/buttonGoML"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="0dp"
+            android:layout_margin="10dp"
+            android:text="Morse Library" />
+
+        <Button
+            android:id="@+id/buttonGoMTS"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/accent"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="0dp"
+            android:layout_margin="10dp"
+            android:text="Morse To Sound" />
+    </LinearLayout>
+
+</LinearLayout>
