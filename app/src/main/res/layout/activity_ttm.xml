@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
             android:backgroundTint="@color/accent"
-            android:text="Button"
+            android:text="Swap"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:cornerRadius="0dp" />
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:background="@color/background_highlight"
             android:enabled="true"
-            android:hint="Morse here"
+            android:hint="Morse appears here"
             android:inputType="textCapSentences|textMultiLine"
             android:padding="10dp"
             android:text=""

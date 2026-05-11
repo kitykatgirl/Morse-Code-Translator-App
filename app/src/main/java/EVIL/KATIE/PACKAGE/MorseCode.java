@@ -4,29 +4,47 @@ package EVIL.KATIE.PACKAGE;
 // Posted by Martin
 // Retrieved 2026-04-24, License - CC BY-SA 4.0
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class MorseCode {
 
     private static final String[] english = {
-            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-            "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x",
-            "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
-            ",", ".", "?", "!", ":", "@", "=", "-", "+", "\"", "/", "&",
-            "'", "(", ")"
+            // Letters
+            "a","b","c","d","e","f","g","h","i","j","k","l",
+            "m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+
+            // Numbers
+            "0","1","2","3","4","5","6","7","8","9",
+
+            // Punctuation
+            ".", ",", "?", "!", ":", ";", "=", "+", "-", "_",
+            "\"", "'", "/", "@", "&", "(", ")", "$",
+
+            // extra
+            "�"
     };
 
     private static final String[] morse = {
-            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..",
-            ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.",
-            "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".----",
-            "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.",
-            "-----", "--..--", ".-.-.-", "..--..", "-.-.--", "---...", ".--.-.",
-            "-...-", "-....-", ".-.-.", ".-..-.", "-..-.", ".-...", ".----.",
-            "-.--.", "-.--.-"
+            // Letters
+            ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
+            "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-",
+            "-.--", "--..",
+
+            // Numbers
+            "-----", ".----", "..---", "...--", "....-", ".....",
+            "-....", "--...", "---..", "----.",
+
+            // Punctuation
+            ".-.-.-", "--..--", "..--..", "-.-.--", "---...", "-.-.-.", "-...-", ".-.-.", "-....-",
+            "..--.-", ".-..-.", ".----.", "-..-.", ".--.-.", ".-...", "-.--.", "-.--.-", "...-..-",
+
+            // extra
+            "�"
     };
 
     private static final Map<String, String> EN_TO_MORSE = new HashMap<>();
@@ -50,12 +68,12 @@ public class MorseCode {
 //        System.out.println(output); // hello, world!
 //    }
 
-    public static String[][] getLetterMorseTable() {
-        String[][] table = new String[english.length][2];
+// this function was made by me btw VVV
+    public static List<MorseEntry> getLetterMorseTable() {
+        List<MorseEntry> table = new ArrayList<>();
 
         for (int i = 0; i < english.length; i++) {
-            table[i][0] = english[i];
-            table[i][1] = morse[i];
+            table.add(new MorseEntry(english[i], morse[i]));
         }
 
         return table;
@@ -90,7 +108,8 @@ public class MorseCode {
     }
 
     private static String createWord(String word, String joiner, String splitter, Map<String, String> mapper) {
-        return Arrays.stream(word.split(splitter)).map(mapper::get).collect(Collectors.joining(joiner));
+
+        return Arrays.stream(word.split(splitter)).map(c -> mapper.getOrDefault(c, "�")).collect(Collectors.joining(joiner));
     }
 
 }
